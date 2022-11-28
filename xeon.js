@@ -95,6 +95,7 @@ async function startXeonBotInc() {
     })
 
     XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
+    	if (!AntiNsfw) return
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
         try {
         mek = chatUpdate.messages[0]
@@ -112,6 +113,7 @@ async function startXeonBotInc() {
     })
     
     XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
+    	if (AntiNsfw) return
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
         try {
         mek = chatUpdate.messages[0]
