@@ -105,7 +105,7 @@ async function startXeonBotInc() {
         if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
         m = smsg(XeonBotInc, mek, store)
         require("./XeonCheems4")(XeonBotInc, m, chatUpdate, store)
-        require("./XeonCheems5")(XeonBotInc, m, chatUpdate, store)
+        
         } catch (err) {
             console.log(err)
         }
