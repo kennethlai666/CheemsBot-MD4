@@ -95,8 +95,7 @@ async function startXeonBotInc() {
     })
 
     XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
-    	if (ntnsfw.includes(anu.id)) return
-        //console.log(JSON.stringify(chatUpdate, undefined, 2))
+        //////////////console.log(JSON.stringify(chatUpdate, undefined, 2))
         try {
         mek = chatUpdate.messages[0]
         if (!mek.message) return
@@ -113,8 +112,7 @@ async function startXeonBotInc() {
     })
     
     XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
-    	if (!ntnsfw.includes(anu.id)) return
-        //console.log(JSON.stringify(chatUpdate, undefined, 2))
+        ///////////////console.log(JSON.stringify(chatUpdate, undefined, 2))
         try {
         mek = chatUpdate.messages[0]
         if (!mek.message) return

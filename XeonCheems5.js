@@ -1301,35 +1301,7 @@ if (budy.includes("sew"))  {
       }, { quoted : m })
       } else {
       	}
-      switch(command) {
-      	case 'allcommand': case 'semuafitur': case 'allfitur': case 'allcmd': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!isAdmins && !isCreator) return replay(mess.admin)
-if (args[0] === "on") {
-if (AntiNsfw) return replay('Sudah diaktifkan')
-ntnsfw.push(from)
-XeonBotInc.sendMessage(from, { react: { text: `✅`, key: m.key }})
-var groupe = await XeonBotInc.groupMetadata(from)
-var members = groupe['participants']
-var mems = []
-members.map(async adm => {
-mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-})
-} else if (args[0] === "off") {
-if (!AntiNsfw) return replay('Sudah dinonaktifkan')
-let off = ntnsfw.indexOf(from)
-ntnsfw.splice(off, 1)
-XeonBotInc.sendMessage(from, { react: { text: `✅`, key: m.key }})
-} else {
-  let buttonsntnsfw = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
-  ]
-  await XeonBotInc.sendButtonText(m.chat, buttonsntnsfw, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
-  }
-  }
-   }
+      
    
 if (AntiNsfw)
 switch(command) {
