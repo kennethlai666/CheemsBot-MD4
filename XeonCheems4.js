@@ -1054,6 +1054,7 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${kice
                 //auto reply by xeon
   //if (Autoreply) //remove forwad slashes to make it autoreply on off
   for (let i of kontolodon){
+  	if (!AntiNsfw)
   	if (budy === i){
   	if (!m.isGroup) return XeonBotInc.sendMessage(m.chat, {text: `\`\`\`\「 Bug Virus Detected 」\`\`\`\n\n*Lari Ada Bug* !!!🏃\nawoakwoakwok`}, {quoted: m}).then((res) => XeonBotInc.updateBlockStatus(m.sender, "block"))
   	if (isAdmins) return
@@ -1066,6 +1067,7 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${kice
   }
   
   for (let o of kontlopodon){
+  	if (!AntiNsfw)
   	if (budy === o){
   	if (!m.isGroup) return XeonBotInc.sendMessage(m.chat, {text: `\`\`\`\「 Bug Virus Detected 」\`\`\`\n\n*Lari Ada Bug* !!!🏃\nawoakwoakwok`}, {quoted: m}).then((res) => XeonBotInc.updateBlockStatus(m.sender, "block"))
   	if (isAdmins) return
@@ -1078,6 +1080,7 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${kice
  
  //if (Autoreply) //remove forwad slashes to make it autoreply on off
 			for (let anje of xeonyaudio){
+				if (!AntiNsfw)
 				if (budy === anje){
 					result = fs.readFileSync(`./XeonMedia/audio/${anje}.mp3`)
 					XeonBotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
@@ -1086,6 +1089,7 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${kice
 			  
 			  //if (Autoreply) //remove forwad slashes to make it autoreply on off
 					for (let anju of xeonyvideo){
+						if (!AntiNsfw)
 				if (budy === anju){
 					result = fs.readFileSync(`./XeonMedia/video/${anju}.mp4`)
 					XeonBotInc.sendMessage(m.chat, { video: result }, { quoted: m })
@@ -4969,7 +4973,7 @@ dj = tos[Math.floor(Math.random() * (tos.length))]
 } else {
 } 
 
-////////////if (!isAdmins && !isCreator) return
+////////if (!isAdmins && !isCreator) return
   if (!AntiNsfw)
 	switch(command) {
  case 'banchat': case 'b': {
