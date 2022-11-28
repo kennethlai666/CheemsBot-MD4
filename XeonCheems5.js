@@ -1303,6 +1303,11 @@ if (budy.includes("sew"))  {
       
 if (AntiNsfw)
 switch(command) {
+case 'test': {
+	if (!isCreator) return
+	reply(`XeonCheems5 *nyala*`)
+	}
+	break
  case 'banchat': case 'b': {
  if (isBan) return reply(mess.ban)	 			
 if (!isCreator) return replay(mess.owner)
