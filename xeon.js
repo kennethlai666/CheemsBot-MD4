@@ -35,6 +35,7 @@ const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/myfunc')
 const moment = require('moment-timezone')
+const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
 
 var low
 try {
