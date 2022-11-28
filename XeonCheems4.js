@@ -665,7 +665,7 @@ XeonBotInc.sendMessage(from, {sticker: dj}, {quoted:m})
 } else {
 }
 
-if (budy.includes("6285602507835")) {
+if (budy.includes("6285842965801")) {
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 cb = `🤜`
@@ -705,7 +705,7 @@ XeonBotInc.sendMessage(from, {sticker: dj}, {quoted:m})
 }
 
 //antivirtex by xeon
-  if (budy.length > 3500) {
+  if (budy.length > 3000) {
   	if (!m.isGroup) return XeonBotInc.sendMessage(m.chat, {text: `\`\`\`\「 Virus Detected 」\`\`\`\n\nAnda Mengirim Kata Lebih Dari 2000+\nMaaf, Anda Akan Kami Blokir!`}, {quoted: m}).then((res) => XeonBotInc.updateBlockStatus(m.sender, "block")) /////////////////////////////////.then((res) => XeonBotInc.sendContact(m.chat, global.rkyt)).then((res) => sleep(850)).then((res) => XeonBotInc.updateBlockStatus(m.sender, "block"))
   	if (!isBotAdmins) return ///////////////////////////////////////XeonBotInc.sendMessage(m.chat, {text: `\`\`\`「 Virus Detected 」\`\`\`\n\n*${pushname}* Mengirim Kata Lebih Dari 1500+\n\n_ 🔴 Sayangnya Bot Bukan Admin ☹️_`}, {quoted: fdocs})
 if (isAdmins) return 
@@ -717,7 +717,7 @@ await XeonBotInc.groupSettingUpdate(m.chat, 'announcement')
                     ]
                     let fgh = `*${pushname}* Mengirim Virus!`
                     if (m.isBaileys) return
-                    let caption = `\`\`\`\「 Virus Detected 」\`\`\`\n\n_2000+ Karakter Terdeteksi_\n\n_*Tunggu 1 Menit,*_\n_*Grup Akan Dibuka Otomatis*_`
+                    let caption = `\`\`\`\「 Virus Detected 」\`\`\`\n\n3000+ Karakter Terdeteksi_\n\n_*Tunggu 1 Menit,*_\n_*Grup Akan Dibuka Otomatis*_`
                     let buttons = [
                         { buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 }
                       //////////////////////////  { buttonId: 'startx', buttonText: { displayText: '🦍💨' }, type: 1 }
@@ -826,15 +826,6 @@ XeonBotInc.sendMessage(m.chat, { sticker : result })
 }
 
 if (budy.includes("〽")) {
-	  	if (!m.isGroup) return XeonBotInc.sendMessage(m.chat, {text: `\`\`\`\「 Virus Detected 」\`\`\`\n\nAnda Mengirim Kata Lebih Dari 1500+\nMaaf, Anda Akan Kami Blokir!`}, {quoted: m}).then((res) => XeonBotInc.updateBlockStatus(m.sender, "block")) /////////////////////////////////.then((res) => XeonBotInc.sendContact(m.chat, global.rkyt)).then((res) => sleep(850)).then((res) => XeonBotInc.updateBlockStatus(m.sender, "block"))
-if (!isBotAdmins) return 
-if (m.isBaileys && m.fromMe) return
-XeonBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: m.key.id, participant: m.key.participant } }) 
-await XeonBotInc.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-} else {
-}
-
-if (budy.includes("mslzk")) {
 	  	if (!m.isGroup) return XeonBotInc.sendMessage(m.chat, {text: `\`\`\`\「 Virus Detected 」\`\`\`\n\nAnda Mengirim Kata Lebih Dari 1500+\nMaaf, Anda Akan Kami Blokir!`}, {quoted: m}).then((res) => XeonBotInc.updateBlockStatus(m.sender, "block")) /////////////////////////////////.then((res) => XeonBotInc.sendContact(m.chat, global.rkyt)).then((res) => sleep(850)).then((res) => XeonBotInc.updateBlockStatus(m.sender, "block"))
 if (!isBotAdmins) return 
 if (m.isBaileys && m.fromMe) return
@@ -4978,7 +4969,7 @@ dj = tos[Math.floor(Math.random() * (tos.length))]
 } else {
 } 
 
-//////////if (!isAdmins && !isCreator) return
+if (!isAdmins && !isCreator) return
   if (!AntiNsfw)
 	switch(command) {
  case 'banchat': case 'b': {
@@ -12601,6 +12592,7 @@ break
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (m.message && msgFilter.addFilter(from)) return
+XeonBotInc.sendMessage(from, { react: { text: `📥`, key: m.key }})
 let nganu = await fetchJson(`https://apimu.my.id/downloader/youtube3?link=${text}&type=360`)
 try {
 let gambar = await getBuffer(anu.thumbnail)
@@ -12660,6 +12652,7 @@ case 'ytad': try{
                  if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (m.message && msgFilter.addFilter(from)) return
+XeonBotInc.sendMessage(from, { react: { text: `📥`, key: m.key }})
 let nganu = await fetchJson(`https://apimu.my.id/downloader/youtube3?link=${text}&type=360`)
 try {
 let gambar = await getBuffer(anu.thumbnail)
@@ -12709,6 +12702,7 @@ case 'ytdc2': try{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (m.message && msgFilter.addFilter(from)) return
+XeonBotInc.sendMessage(from, { react: { text: `📥`, key: m.key }})
 let nganu = await fetchJson(`https://apimu.my.id/downloader/youtube3?link=${text}&type=360`)
 try {
 let gambar = await getBuffer(anu.thumbnail)

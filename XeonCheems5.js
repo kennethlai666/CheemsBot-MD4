@@ -8950,6 +8950,7 @@ break
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (m.message && msgFilter.addFilter(from)) return
+XeonBotInc.sendMessage(from, { react: { text: `📥`, key: m.key }})
 let nganu = await fetchJson(`https://apimu.my.id/downloader/youtube3?link=${text}&type=360`)
 try {
 let gambar = await getBuffer(anu.thumbnail)
@@ -9009,6 +9010,7 @@ case 'ytad': try{
                  if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (m.message && msgFilter.addFilter(from)) return
+XeonBotInc.sendMessage(from, { react: { text: `📥`, key: m.key }})
 let nganu = await fetchJson(`https://apimu.my.id/downloader/youtube3?link=${text}&type=360`)
 try {
 let gambar = await getBuffer(anu.thumbnail)
@@ -9058,6 +9060,7 @@ case 'ytdc2': try{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (m.message && msgFilter.addFilter(from)) return
+XeonBotInc.sendMessage(from, { react: { text: `📥`, key: m.key }})
 let nganu = await fetchJson(`https://apimu.my.id/downloader/youtube3?link=${text}&type=360`)
 try {
 let gambar = await getBuffer(anu.thumbnail)
