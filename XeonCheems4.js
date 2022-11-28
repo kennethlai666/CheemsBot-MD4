@@ -512,8 +512,8 @@ const reply = (teks) => {
         }
 
         //Push Message To Console && Auto Read\\
+        if (!AntiNsfw)
         if (m.message) {
-        	if (!AntiNsfw) return
             console.log(chalk.black(chalk.bgWhite('[ MESSAGE 1]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
         }
 	
