@@ -35,7 +35,6 @@ const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/myfunc')
 const moment = require('moment-timezone')
-const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
 
 var low
 try {
@@ -96,7 +95,7 @@ async function startXeonBotInc() {
     })
 
     XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
-    	if (!AntiNsfw) return
+    	if (ntnsfw.includes(anu.id)) return
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
         try {
         mek = chatUpdate.messages[0]
@@ -114,7 +113,7 @@ async function startXeonBotInc() {
     })
     
     XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
-    	if (AntiNsfw) return
+    	if (!ntnsfw.includes(anu.id)) return
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
         try {
         mek = chatUpdate.messages[0]
