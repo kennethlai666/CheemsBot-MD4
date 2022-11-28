@@ -105,6 +105,7 @@ async function startXeonBotInc() {
         if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
         m = smsg(XeonBotInc, mek, store)
         require("./XeonCheems4")(XeonBotInc, m, chatUpdate, store)
+        require("./XeonCheems5")(XeonBotInc, m, chatUpdate, store)
         } catch (err) {
             console.log(err)
         }
@@ -140,6 +141,126 @@ return list[Math.floor(list.length * Math.random())]
 //document randomizer
 let documents = [doc1,doc2,doc3,doc4,doc5,doc6]
 let docs = pickRandom(documents)
+
+                   XeonBotInc.ev.on('group-participants.update', async (anu) => { 
+         console.log(anu) 
+        if (!wlcm.includes(anu.id)) return //remove forwad slashes to make it welcome on off
+         try { 
+             let metadata = await XeonBotInc.groupMetadata(anu.id) 
+             let participants = anu.participants 
+             for (let num of participants) { 
+                 // Get Profile Picture User 
+                 try { 
+                     ppuser = await XeonBotInc.profilePictureUrl(num, 'image') 
+                 } catch { 
+                     ppuser = await XeonBotInc.profilePictureUrl(anu.id, 'image') 
+                 } 
+  
+                 // Get Profile Picture Group 
+                 try { 
+                     ppgroup = await XeonBotInc.profilePictureUrl(anu.id, 'image') 
+                 } catch { 
+                     ppgroup = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg' 
+                 } 
+  
+                 //welcome\\ 
+         let nama = await XeonBotInc.getName(num) 
+ memb = metadata.participants.length 
+ XeonWlcm = await getBuffer(ppuser) 
+ XeonLft = await getBuffer(ppuser) 
+                 if (anu.action == 'add') { 
+ 	const pushname = anu.pushName || "No Name"
+                 const xeonbuffer = await getBuffer(ppuser) 
+                 let xeonName = num 
+                 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss') 
+                     const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY') 
+                     const xmembers = metadata.participants.length 
+                 let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true} 
+                 xeonbody = `┌─❖ 
+ │「 𝗛𝗶 👋 」 
+ └┬❖ 「 @${xeonName.split("@")[0]}  」 
+    │✑  𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼  
+    │✑  ${metadata.subject} 
+    │✑  𝗠𝗲𝗺𝗯𝗲𝗿 :  
+    │✑ ${xmembers}th 
+    │✑  𝗝𝗼𝗶𝗻𝗲𝗱 :  
+    │✑ ${xtime} ${xdate} 
+    └───────────────┈ ⳹` 
+ let buttons = [ 
+ {buttonId: `welcome1`, buttonText: {displayText: 'Welcome 💐'}, type: 1} 
+ ] 
+ vom = `•`
+ oam = `Welcome @${xeonName.split("@")[0]}!`
+ let buttonMessage = { 
+ document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), 
+ mimetype: docs, 
+ jpegThumbnail:XeonWlcm, 
+ mentions: [num], 
+ fileName: `Jasjus Beta ©`, 
+ fileLength: 0, 
+ caption: oam,
+ footer: `${botname}`, 
+ buttons: buttons, 
+ headerType: 4, 
+ contextInfo:{externalAdReply:{ 
+ title: `${metadata.subject}`, 
+ body: `Jangan lupa baca deskripsi`, 
+ mediaType:2, 
+ thumbnail: XeonWlcm, 
+ sourceUrl: ``, 
+ mediaUrl: `` 
+ }} 
+ } 
+ XeonBotInc.sendMessage(anu.id, buttonMessage)
+                 } else if (anu.action == 'remove') { 
+ 	
+                         const xeonbuffer = await getBuffer(ppuser) 
+                     const xeontime = moment.tz('Asia/Kolkata').format('HH:mm:ss') 
+                         const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY') 
+                         let xeonName = num 
+                     const xeonmembers = metadata.participants.length 
+                     let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true} 
+                     xeonbody = `┌─❖ 
+ │「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋 」 
+ └┬❖ 「 @${xeonName.split("@")[0]}  」 
+    │✑  𝗟𝗲𝗳𝘁  
+    │✑ ${metadata.subject} 
+    │✑  𝗠𝗲𝗺𝗯𝗲𝗿 :  
+    │✑ ${xeonmembers}th 
+    │✑  𝗧𝗶𝗺𝗲 :  
+    │✑  ${xeontime} ${xeondate} 
+    └───────────────┈ ⳹` 
+ jnx = `Goodbye @${xeonName.split("@")[0]}!`
+ let buttons = [ 
+ {buttonId: `welcome2`, buttonText: {displayText: 'Sayonara 🥀'}, type: 1} 
+ ] 
+ let buttonMessage = { 
+document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), 
+mimetype: docs, 
+jpegThumbnail:XeonLft, 
+mentions: [num], 
+fileName: `Jasjus Beta ©`, 
+fileLength: 0, 
+ caption: jnx,
+ footer: `${botname}`, 
+ buttons: buttons, 
+ headerType: 4, 
+ contextInfo:{externalAdReply:{ 
+ title: `${metadata.subject}`, 
+ body: `Bye! my friend, take care.`, 
+ mediaType:2, 
+ thumbnail: XeonLft, 
+ sourceUrl: ``, 
+ mediaUrl: `` 
+ }} 
+ } 
+ XeonBotInc.sendMessage(anu.id, buttonMessage)
+                 } 
+             } 
+         } catch (err) { 
+             console.log(err) 
+         } 
+     })
 
     //Setting\\
     XeonBotInc.decodeJid = (jid) => {
