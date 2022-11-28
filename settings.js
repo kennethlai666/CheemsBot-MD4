@@ -86,15 +86,15 @@ global.linkz = "https://chat.whatsapp.com/J1S3g1fbWSS9r01UNSBLst" //your theme u
 global.websitex = "https://youtu.be/ydBAmKT7f4s" //ur website to be displayed
 global.botscript = 'https://github.com/kennethlai666/CheemsBot-MD4' //script link
 global.reactmoji = "😘" //ur menu react emoji
-global.themeemoji = "🐒" //ur theme emoji
+global.themeemoji = "🪀" //ur theme emoji
 global.packname = "Sara(H) • Viloid" //ur sticker watermark packname
 global.author = "Kenneth Morris" //ur sticker watermark author
 
 //Bot theme media
-global.thum = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
-global.log0 = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur logo pic
-global.err4r = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur error pic
-global.thumb = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
+global.thum = fs.readFileSync("./XeonMedia/theme/thumbnail/kennethid.jpg") //ur thumb pic
+global.log0 = fs.readFileSync("./XeonMedia/theme/thumbnail/kennethid.jpg") //ur logo pic
+global.err4r = fs.readFileSync("./XeonMedia/theme/thumbnail/kennethid.jpg") //ur error pic
+global.thumb = fs.readFileSync("./XeonMedia/theme/thumbnail/kennethid.jpg") //ur thumb pic
 
 //damtabase
 global.premium = ['6285773496010'] //ur premium numbers
@@ -111,7 +111,7 @@ global.ntwame = []
 global.nttoxic = []
 global.ntnsfw = []
 global.ntvirtex = []
-global.rkyt = ['6285892879274']
+global.rkyt = ['6285747219408']
 global.wlcm = []
 global.gcrevoke = []
 global.autorep = []
@@ -155,11 +155,12 @@ global.antitags = true
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
+    cmmnd:  '_perlu mengaktifkan *.allcmd* untuk menggunakan fitur ini_',
     success: 'Done ✓',
     admin: 'This Feature Is Only For Admin!',
     botAdmin: 'Bot Must Be Admin First!',
     owner: 'This Feature Is Only For Owner!',
-    group: 'Feature Used Only For Groups!',
+    group: 'Fitur ini khusus grup!\n\nSewa Bot Mulai Dari 5K - 10K Perbulan\n_*Contact Owner*_:\nhttp://wa.me/6285842965801/?text=Aku+mau+sewa+bot',
     private: 'Features Used Only For Private Chat!',
     bot: 'This Feature Is Only For Bot',
     wait: 'In process...',
